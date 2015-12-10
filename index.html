@@ -5,8 +5,18 @@
 </head>
 <body>
 <h1>HELLO PHONEGAP WORLD</h1>
-<p>Test af GITHUB integration</p>
-<button type="button" onclick="alert('HELLO WORLD')">PUSH ME</button>
-
+<button type="button" id="pushme">PUSH ME</button>
+<p id="content" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+// executes
+$( document ).ready(function() {
+    $('#pushme').on('click', function(){
+      $.get( "lorem.txt", function( data ) {
+          $( "#content" ).html( data );
+      });
+    })
+});
+</script>  
 </body>
 </html>
