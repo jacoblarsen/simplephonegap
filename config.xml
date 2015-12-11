@@ -4,6 +4,6 @@
         id          = "com.phonegap.example"
         versionCode = "10" 
         version     = "1.0.0" >
-
+    <uses-permission android:name="android.permission.INTERNET" />
 	<access origin="*" />
 </widget>
