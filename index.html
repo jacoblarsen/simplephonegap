@@ -2,20 +2,34 @@
 <html>
 <head>
   <title>Simple Phonegap Test</title>
+  <link rel="stylesheet" type="text/css" href="css/site.css">
+
 </head>
 <body>
-<h1>HELLO PHONEGAP WORLD</h1>
-<button type="button" id="pushme">PUSH ME</button>
-<p id="content" />
-<p>Asad was here</p>
+  <div class="header">
+    <button type="button" id="getSite">Get Random website</button>
+    <button type="button" id="clean">Clean Up</button>
+  </div>
+
+  <p id="content"> </div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script>
 // executes
+var websites = ["http://www.hofor.dk","http://phonegap.com/","http://www.apple.com/"];
 $.support.cors=true;
 $( document ).ready(function() {
-    $('#pushme').on('click', function(){
-      $.get( "http://www.hofor.dk", function( data ) {
+    $('#getSite').on('click', function(){
+      var rand = Math.floor((Math.random() * 2) + 0);  
+      $.get(websites[rand] , function( data ) {
           $( "#content" ).html( data );
+      });
+    })
+    
+    
+    $('#getSite').on('click', function(){
+      $.get( "", function( data ) {
+          $( "#content" ).html("");
       });
     })
 });
