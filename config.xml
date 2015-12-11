@@ -4,6 +4,6 @@
         id          = "com.phonegap.example"
         versionCode = "10" 
         version     = "1.0.0" >
-    <uses-permission android:name="android.permission.INTERNET" />
+    <plugin name="com.indigoway.cordova.whitelist.whitelistplugin" spec="1.1.1" source="pgb" />
 	<access origin="*" />
 </widget>
