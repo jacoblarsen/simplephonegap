@@ -14,7 +14,7 @@
 $.support.cors=true;
 $( document ).ready(function() {
     $('#pushme').on('click', function(){
-      $.get( "lorem.txt", function( data ) {
+      $.get( "http://hofor.dk", function( data ) {
           $( "#content" ).html( data );
       });
     })
